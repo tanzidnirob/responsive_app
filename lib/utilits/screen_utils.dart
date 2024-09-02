@@ -8,7 +8,7 @@ class ScreenUtils {
   static DeviceType getDeviceType(double width){
     if(width < ScreenUtils.mobileMaxSize){
       return DeviceType.mobile;
-    }else if(width >= ScreenUtils.tabletMaxSize && width < ScreenUtils.desktopMinSize){
+    }else if(width >= ScreenUtils.mobileMaxSize && width < ScreenUtils.desktopMinSize){
       return DeviceType.tablet;
     }
 

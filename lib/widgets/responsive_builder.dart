@@ -18,11 +18,13 @@ class ResponsiveBuilder extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final DeviceType deviceType = ScreenUtils.getDeviceType(size.width);
 
-    if (deviceType == DeviceType.mobile){
+    if (deviceType == DeviceType.mobile) {
       return mobile;
-    }else if(deviceType == DeviceType.tablet){
+    } else if (deviceType == DeviceType.tablet) {
       return tablet ?? mobile;
-  }
+    }
 
     return desktop;
+  }
+
 }
